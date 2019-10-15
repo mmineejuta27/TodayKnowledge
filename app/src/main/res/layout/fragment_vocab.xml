@@ -26,45 +26,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/vocabButton1"
-            android:layout_width="227dp"
-            android:layout_height="80dp"
-            android:text="Apple : แอบเปิ้ล"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/vocabButton2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toEndOf="@+id/imageView5"
-            app:layout_constraintTop_toBottomOf="@+id/groupVocabText" />
-
-        <Button
-            android:id="@+id/vocabButton2"
-            android:layout_width="227dp"
-            android:layout_height="80dp"
-            android:text="Pumpkin : ฟังทอง"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/vocabButton3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/vocabButton1" />
-
-        <Button
-            android:id="@+id/vocabButton3"
-            android:layout_width="227dp"
-            android:layout_height="80dp"
-            android:text="Watermeron : แตงโม"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/vocabButton4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView7"
-            app:layout_constraintTop_toBottomOf="@+id/vocabButton2" />
-
-        <Button
             android:id="@+id/exerciseButton"
             android:layout_width="180dp"
             android:layout_height="60dp"
@@ -80,7 +41,7 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="59dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="50dp"
@@ -91,7 +52,7 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="59dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="40dp"
             android:src="@drawable/pumpkin"
@@ -101,7 +62,7 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="59dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="40dp"
             android:src="@drawable/watermelon"
@@ -111,7 +72,7 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="59dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="44dp"
             android:src="@drawable/banana"
@@ -119,17 +80,62 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
-        <Button
-            android:id="@+id/vocabButton4"
+        <TextView
+            android:id="@+id/vocabText1"
             android:layout_width="227dp"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Apple : แอบเปิ้ล"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/vocabText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vocabText2"
+            android:layout_width="227dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Pumpkin : ฟังทอง"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/vocabText3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/vocabText1" />
+
+        <TextView
+            android:id="@+id/vocabText3"
+            android:layout_width="227dp"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="Watermeron : แตงโม"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/vocabText4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/vocabText2" />
+
+        <TextView
+            android:id="@+id/vocabText4"
+            android:layout_width="227dp"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:text="Banana : กล้วย"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/exerciseButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toBottomOf="@+id/vocabButton3" />
+            app:layout_constraintTop_toBottomOf="@+id/vocabText3" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
