@@ -12,7 +12,7 @@
 
         <fragment
             android:id="@+id/titleFragment"
-            android:name="buu.informatics.s59161073.todayknowledge.GroupingFragment"
+            android:name="buu.informatics.s59161073.todayknowledge.VocabFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
