@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentExerciseBinding
 
 /**
@@ -21,7 +22,18 @@ class ExerciseFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentExerciseBinding>(inflater,
             R.layout.fragment_exercise,container,false)
-
+        binding.ansButton1.setOnClickListener {
+                view -> view.findNavController().navigate(R.id.action_exerciseFragment_to_scoreFragment)
+        }
+        binding.ansButton2.setOnClickListener {
+                view -> view.findNavController().navigate(R.id.action_exerciseFragment_to_scoreFragment)
+        }
+        binding.ansButton3.setOnClickListener {
+                view -> view.findNavController().navigate(R.id.action_exerciseFragment_to_scoreFragment)
+        }
+        binding.ansButton4.setOnClickListener {
+                view -> view.findNavController().navigate(R.id.action_exerciseFragment_to_scoreFragment)
+        }
 
         return binding.root
     }
