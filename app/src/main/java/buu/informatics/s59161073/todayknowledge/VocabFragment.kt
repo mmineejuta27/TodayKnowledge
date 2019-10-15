@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentVocabBinding
 
 /**
@@ -21,6 +22,10 @@ class VocabFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentVocabBinding>(inflater,
             R.layout.fragment_vocab,container,false)
+
+        binding.exerciseButton.setOnClickListener {
+                view -> view.findNavController().navigate(R.id.action_vocabFragment_to_exerciseFragment)
+        }
         return binding.root
     }
 

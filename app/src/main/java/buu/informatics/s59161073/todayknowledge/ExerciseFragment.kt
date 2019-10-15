@@ -21,6 +21,8 @@ class ExerciseFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentExerciseBinding>(inflater,
             R.layout.fragment_exercise,container,false)
+
+
         return binding.root
     }
 

@@ -18,20 +18,36 @@
         android:id="@+id/groupingFragment"
         android:name="buu.informatics.s59161073.todayknowledge.GroupingFragment"
         android:label="GroupingFragment"
-        tools:layout="@layout/fragment_grouping"/>
+        tools:layout="@layout/fragment_grouping">
+        <action
+            android:id="@+id/action_groupingFragment_to_vocabFragment"
+            app:destination="@id/vocabFragment" />
+    </fragment>
     <fragment
         android:id="@+id/vocabFragment"
         android:name="buu.informatics.s59161073.todayknowledge.VocabFragment"
         android:label="VocabFragment"
-        tools:layout="@layout/fragment_vocab"/>
+        tools:layout="@layout/fragment_vocab">
+        <action
+            android:id="@+id/action_vocabFragment_to_exerciseFragment"
+            app:destination="@id/exerciseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/exerciseFragment"
         android:name="buu.informatics.s59161073.todayknowledge.ExerciseFragment"
         android:label="ExerciseFragment"
-        tools:layout="@layout/fragment_exercise"/>
+        tools:layout="@layout/fragment_exercise">
+        <action
+            android:id="@+id/action_exerciseFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
     <fragment
         android:id="@+id/scoreFragment"
         android:name="buu.informatics.s59161073.todayknowledge.ScoreFragment"
         android:label="ScoreFragment"
-        tools:layout="@layout/fragment_score"/>
+        tools:layout="@layout/fragment_score">
+        <action
+            android:id="@+id/action_scoreFragment_to_groupingFragment"
+            app:destination="@id/groupingFragment" />
+    </fragment>
 </navigation>
