@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentUserBinding
 
 /**
@@ -21,6 +22,9 @@ class UserFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentUserBinding>(inflater,
             R.layout.fragment_user,container,false)
+        binding.okButton.setOnClickListener {
+            view -> view.findNavController().navigate(R.id.action_userFragment_to_groupingFragment)
+        }
         return binding.root
     }
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/userFragment">
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.UserFragment"
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_userFragment_to_groupingFragment"
+            app:destination="@id/groupingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupingFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.GroupingFragment"
+        android:label="GroupingFragment"
+        tools:layout="@layout/fragment_grouping"/>
+    <fragment
+        android:id="@+id/vocabFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.VocabFragment"
+        android:label="VocabFragment"
+        tools:layout="@layout/fragment_vocab"/>
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.ExerciseFragment"
+        android:label="ExerciseFragment"
+        tools:layout="@layout/fragment_exercise"/>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.ScoreFragment"
+        android:label="ScoreFragment"
+        tools:layout="@layout/fragment_score"/>
+</navigation>
