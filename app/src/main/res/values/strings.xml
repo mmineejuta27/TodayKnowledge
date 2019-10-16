@@ -3,4 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="job_grouping">JOB : อาชีพ</string>
+    <string name="fruit_grouping">FRUIT : ผลไม้</string>
+    <string name="animal_grouping">ANIMAL : สัตว์</string>
+    <string name="color_grouping">COLOR : สี</string>
 </resources>
