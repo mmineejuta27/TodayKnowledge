@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="30dp"
-            android:text="Exercise"
+            android:text="@string/exercise_textView"
             android:textColor="@color/colorAccent"
             android:textSize="36sp"
             android:textStyle="bold"

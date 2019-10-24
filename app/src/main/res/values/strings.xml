@@ -7,4 +7,6 @@
     <string name="fruit_grouping">FRUIT : ผลไม้</string>
     <string name="animal_grouping">ANIMAL : สัตว์</string>
     <string name="color_grouping">COLOR : สี</string>
+    <string name="exercise_textView"><u>Exercise</u></string>
+    <string name="name_input">Name</string>
 </resources>
