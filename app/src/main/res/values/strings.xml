@@ -9,4 +9,19 @@
     <string name="color_grouping">COLOR : สี</string>
     <string name="exercise_textView"><u>Exercise</u></string>
     <string name="name_input">Name</string>
+    <string name="watermelon">watermelon</string>
+    <string name="GroupingVocab">FRUIT</string>
+    <string name="username">BEST</string>
+    <string name="scoer_execise">100 Score</string>
+    <string name="button_main">Main</string>
+    <string name="todo">TODO</string>
+    <string name="todays_knowledge">Today\'s Knowledge</string>
+    <string name="vocabulary">Vocabulary</string>
+    <string name="about_text">เกี่ยวกับ</string>
+    <string name="about_information1">วิธีการเล่น</string>
+    <string name="about_information2">1. กรอกชื่อเล่น</string>
+    <string name="about_information3">2.เลือกหมวดหมู่ในเรียนรู้</string>
+    <string name="about_information4">3.อ่านคำศัพท์และสามารถกดปุ่ม Exercise เพื่อทดสอบคำศัทพ์ได้</string>
+    <string name="about_information5">4.กดเลือกคำตอบที่ถูกต้อง มีให้เล่นทั้งหมด 3 ข้อ</string>
+    <string name="about_text2">เป็นแอปพลิเคชันที่เหมาะสำหรับเด็กเล็กๆที่พึ้งหัดเรียนรู้อ่านคำศัพท์ทำให้เด็กเสริมสร้างพัฒนาการใหม่</string>
 </resources>
