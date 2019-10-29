@@ -3,6 +3,7 @@ package buu.informatics.s59161073.todayknowledge
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -21,8 +22,13 @@ class UserFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentUserBinding>(inflater,
             R.layout.fragment_user,container,false)
-        binding.okButton.setOnClickListener {
-            view -> view.findNavController().navigate(R.id.action_userFragment_to_groupingFragment)
+        binding.okButton.setOnClickListener {view ->
+            if(binding.inputName.text.toString().isEmpty()){
+                Toast.makeText(getActivity(), "ช่องว่าง เขียนชื่อด้วยนะ" ,Toast.LENGTH_LONG).show()
+            }else{
+                view.findNavController().navigate(R.id.action_userFragment_to_groupingFragment)
+            }
+
         }
         setHasOptionsMenu(true)
         return binding.root
