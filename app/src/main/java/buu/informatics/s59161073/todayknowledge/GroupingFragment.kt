@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentGroupingBinding
@@ -19,6 +20,8 @@ class GroupingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        var args = GroupingFragmentArgs.fromBundle(arguments!!)
+        Toast.makeText(context,"name : ${args.userName}",Toast.LENGTH_LONG).show()
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentGroupingBinding>(inflater,
             R.layout.fragment_grouping,container,false)

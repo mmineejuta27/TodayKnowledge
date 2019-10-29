@@ -23,10 +23,11 @@ class UserFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentUserBinding>(inflater,
             R.layout.fragment_user,container,false)
         binding.okButton.setOnClickListener {view ->
-            if(binding.inputName.text.toString().isEmpty()){
+            var user = binding.inputName.text.toString()
+            if(user.isEmpty()){
                 Toast.makeText(getActivity(), "ช่องว่าง เขียนชื่อด้วยนะ" ,Toast.LENGTH_LONG).show()
             }else{
-                view.findNavController().navigate(R.id.action_userFragment_to_groupingFragment)
+                view.findNavController().navigate(UserFragmentDirections.actionUserFragmentToGroupingFragment( user ))
             }
 
         }

@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_groupingFragment_to_vocabFragment"
             app:destination="@id/vocabFragment" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/vocabFragment"
