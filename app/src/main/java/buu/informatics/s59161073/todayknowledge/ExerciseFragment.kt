@@ -2,6 +2,7 @@ package buu.informatics.s59161073.todayknowledge
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,21 +20,22 @@ import org.w3c.dom.Text
  * A simple [Fragment] subclass.
  */
 class ExerciseFragment : Fragment() {
+    var a = 0
 
     data class Exercise(
         val text: String,
         val images: List<Int>
     )
-
     private val exercises1: MutableList<Exercise> = mutableListOf(
-        Exercise(text = "waterMelon",
-            images = listOf(R.drawable.watermelon, R.drawable.banana, R.drawable.pumpkin, R.drawable.apple)),
-        Exercise(text = "apple",
-            images = listOf(R.drawable.apple, R.drawable.banana, R.drawable.pumpkin, R.drawable.watermelon)),
-        Exercise(text = "pumpkin",
-            images = listOf(R.drawable.pumpkin, R.drawable.banana, R.drawable.apple, R.drawable.watermelon)),
-        Exercise(text = "banana",
-            images = listOf(R.drawable.banana, R.drawable.apple, R.drawable.pumpkin, R.drawable.watermelon))
+            Exercise(text = "waterMelon",
+                images = listOf(R.drawable.watermelon, R.drawable.banana, R.drawable.pumpkin, R.drawable.apple)),
+            Exercise(text = "apple",
+                images = listOf(R.drawable.apple, R.drawable.banana, R.drawable.pumpkin, R.drawable.watermelon)),
+            Exercise(text = "pumpkin",
+                images = listOf(R.drawable.pumpkin, R.drawable.banana, R.drawable.apple, R.drawable.watermelon)),
+            Exercise(text = "banana",
+                images = listOf(R.drawable.banana, R.drawable.apple, R.drawable.pumpkin, R.drawable.watermelon))
+
     )
 
     private val exercises2: MutableList<Exercise> = mutableListOf(
@@ -58,9 +60,14 @@ class ExerciseFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var args = VocabFragmentArgs.fromBundle(arguments!!)
+
         Toast.makeText(context,"name : ${args.userName} group : ${args.groupButton}", Toast.LENGTH_LONG).show()
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_exercise,container,false)
+        var valueGroping = args.groupButton
+        if (valueGroping == 1){
+            exercises1
+        }
 
         randomizeExercise()
 

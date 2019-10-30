@@ -12,7 +12,6 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentVocabBinding
-import kotlinx.android.synthetic.main.fragment_grouping.*
 import kotlinx.android.synthetic.main.fragment_vocab.*
 
 /**
@@ -30,6 +29,7 @@ class VocabFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentVocabBinding>(inflater,
             R.layout.fragment_vocab,container,false)
 
+        var groupVocabText : TextView = binding.groupVocabText
         var vocabImage1 : ImageView = binding.vocabImage1
         var vocabText1 : TextView = binding.vocabText1
         var vocabImage2 : ImageView = binding.vocabImage2
@@ -40,7 +40,7 @@ class VocabFragment : Fragment() {
         var vocabText4 : TextView = binding.vocabText4
 
         if (args.groupButton == 1 ) {
-
+            groupVocabText.text = "JOB"
             vocabImage1.setImageResource(R.drawable.nurse)
             vocabText1.text = "Nurse : นางพยาบาล"
             vocabImage2.setImageResource(R.drawable.policeman)
