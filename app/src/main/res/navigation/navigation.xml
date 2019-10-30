@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/userFragment">
+    app:startDestination="@+id/userFragment">
 
     <fragment
         android:id="@+id/userFragment"
@@ -61,16 +61,16 @@
         android:name="buu.informatics.s59161073.todayknowledge.ScoreFragment"
         android:label="ScoreFragment"
         tools:layout="@layout/fragment_score">
-        <action
-            android:id="@+id/action_scoreFragment_to_groupingFragment"
-            app:destination="@id/groupingFragment" />
         <argument
             android:name="uerName"
             app:argType="string" />
+        <action
+            android:id="@+id/action_scoreFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="buu.informatics.s59161073.todayknowledge.AboutFragment"
         android:label="AboutFragment"
-        tools:layout="@layout/fragment_about"/>
+        tools:layout="@layout/fragment_about" />
 </navigation>

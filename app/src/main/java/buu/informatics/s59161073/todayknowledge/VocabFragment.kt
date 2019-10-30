@@ -6,10 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentVocabBinding
+import kotlinx.android.synthetic.main.fragment_grouping.*
+import kotlinx.android.synthetic.main.fragment_vocab.*
 
 /**
  * A simple [Fragment] subclass.
@@ -25,6 +29,48 @@ class VocabFragment : Fragment() {
         Toast.makeText(context,"name : ${args.userName} group : ${args.groupButton}", Toast.LENGTH_LONG).show()
         val binding = DataBindingUtil.inflate<FragmentVocabBinding>(inflater,
             R.layout.fragment_vocab,container,false)
+
+        var vocabImage1 : ImageView = binding.vocabImage1
+        var vocabText1 : TextView = binding.vocabText1
+        var vocabImage2 : ImageView = binding.vocabImage2
+        var vocabText2 : TextView = binding.vocabText2
+        var vocabImage3 : ImageView = binding.vocabImage3
+        var vocabText3 : TextView = binding.vocabText3
+        var vocabImage4 : ImageView = binding.vocabImage4
+        var vocabText4 : TextView = binding.vocabText4
+
+        if (args.groupButton == 1 ) {
+
+            vocabImage1.setImageResource(R.drawable.nurse)
+            vocabText1.text = "Nurse : นางพยาบาล"
+            vocabImage2.setImageResource(R.drawable.policeman)
+            vocabText2.text = "Policeman : ตำรวจ"
+            vocabImage3.setImageResource(R.drawable.teacher)
+            vocabText3.text = "Teacher : คุณครู"
+            vocabImage4.setImageResource(R.drawable.doctor)
+            vocabText4.text = "Doctor : หมอ"
+
+        }else if (args.groupButton == 2){
+            vocabImage1.setImageResource(R.drawable.apple)
+            vocabText1.text = "Apple : แอบเปิ้ล"
+            vocabImage2.setImageResource(R.drawable.pumpkin)
+            vocabText2.text = "Pumpkin : ฟักทอง"
+            vocabImage3.setImageResource(R.drawable.watermelon)
+            vocabText3.text = "Watermelon : แตงโม"
+            vocabImage4.setImageResource(R.drawable.banana)
+            vocabText4.text = "Banana : กล้วย"
+
+        }else if (args.groupButton == 3 ){
+            vocabImage1.setImageResource(R.drawable.tiger)
+            vocabText1.text = "Tiger : เสือ"
+            vocabImage2.setImageResource(R.drawable.bird)
+            vocabText2.text = "Bird : นก"
+            vocabImage3.setImageResource(R.drawable.clownfish)
+            vocabText3.text = "Fish : ปลา"
+            vocabImage4.setImageResource(R.drawable.duckling)
+            vocabText4.text = "Duck : เป็ด"
+
+        }
 
         binding.exerciseButton.setOnClickListener {
                 view -> view.findNavController().navigate(R.id.action_vocabFragment_to_exerciseFragment)

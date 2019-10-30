@@ -40,35 +40,36 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/jobimageView1"
+            android:id="@+id/vocabImage1"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="50dp"
             android:src="@drawable/apple"
-            app:layout_constraintBottom_toTopOf="@+id/jobimageView2"
+            app:layout_constraintBottom_toTopOf="@+id/vocabImage2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/vocab_image1" />
 
         <ImageView
-            android:id="@+id/jobimageView2"
+            android:id="@+id/vocabImage2"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="40dp"
             android:src="@drawable/pumpkin"
-            app:layout_constraintBottom_toTopOf="@+id/jobimageView3"
+            app:layout_constraintBottom_toTopOf="@+id/vocabImage3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/jobimageView1" />
+            app:layout_constraintTop_toBottomOf="@+id/vocabImage1" />
 
         <ImageView
-            android:id="@+id/jobimageView3"
+            android:id="@+id/vocabImage3"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="40dp"
             android:src="@drawable/watermelon"
-            app:layout_constraintBottom_toTopOf="@+id/jobimageView4"
+            app:layout_constraintBottom_toTopOf="@+id/vocabImage4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/jobimageView2" />
+            app:layout_constraintTop_toBottomOf="@+id/vocabImage2" />
 
         <TextView
             android:id="@+id/vocabText1"
@@ -82,18 +83,18 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/vocabText2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/jobimageView1"
+            app:layout_constraintStart_toEndOf="@+id/vocabImage1"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/jobimageView4"
+            android:id="@+id/vocabImage4"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="44dp"
             android:src="@drawable/banana"
             app:layout_constraintBottom_toTopOf="@+id/exerciseButton"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/jobimageView3" />
+            app:layout_constraintTop_toBottomOf="@+id/vocabImage3" />
 
         <TextView
             android:id="@+id/vocabText2"
@@ -106,7 +107,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/vocabText3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/jobimageView2"
+            app:layout_constraintStart_toEndOf="@+id/vocabImage2"
             app:layout_constraintTop_toBottomOf="@+id/vocabText1" />
 
         <TextView
@@ -120,7 +121,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/vocabText4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/jobimageView3"
+            app:layout_constraintStart_toEndOf="@+id/vocabImage3"
             app:layout_constraintTop_toBottomOf="@+id/vocabText2" />
 
         <TextView
@@ -134,7 +135,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/exerciseButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/jobimageView4"
+            app:layout_constraintStart_toEndOf="@+id/vocabImage4"
             app:layout_constraintTop_toBottomOf="@+id/vocabText3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

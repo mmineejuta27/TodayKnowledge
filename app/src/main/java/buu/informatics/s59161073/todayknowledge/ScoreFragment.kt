@@ -24,7 +24,7 @@ class ScoreFragment : Fragment() {
             R.layout.fragment_score,container,false)
 
         binding.mainButton.setOnClickListener {
-                view -> view.findNavController().navigate(R.id.action_scoreFragment_to_groupingFragment)
+                view -> view.findNavController().navigate(R.id.action_scoreFragment_to_userFragment)
         }
         return binding.root
     }
