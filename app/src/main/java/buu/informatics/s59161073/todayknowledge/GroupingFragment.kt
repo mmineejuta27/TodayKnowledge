@@ -26,16 +26,16 @@ class GroupingFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentGroupingBinding>(inflater,
             R.layout.fragment_grouping,container,false)
         binding.fruitButton.setOnClickListener {
-                view -> view.findNavController().navigate(R.id.action_groupingFragment_to_vocabFragment)
+                view -> view.findNavController().navigate(GroupingFragmentDirections.actionGroupingFragmentToVocabFragment( 2 , args.userName ))
         }
         binding.jobButton.setOnClickListener {
-                view -> view.findNavController().navigate(R.id.action_groupingFragment_to_vocabFragment)
+                view -> view.findNavController().navigate(GroupingFragmentDirections.actionGroupingFragmentToVocabFragment( 1 , args.userName ))
         }
         binding.colorButton.setOnClickListener {
-                view -> view.findNavController().navigate(R.id.action_groupingFragment_to_vocabFragment)
+                view -> view.findNavController().navigate(GroupingFragmentDirections.actionGroupingFragmentToVocabFragment( 4 , args.userName ))
         }
         binding.animalButton.setOnClickListener {
-                view -> view.findNavController().navigate(R.id.action_groupingFragment_to_vocabFragment)
+                view -> view.findNavController().navigate(GroupingFragmentDirections.actionGroupingFragmentToVocabFragment( 3 , args.userName ))
         }
         return binding.root
     }

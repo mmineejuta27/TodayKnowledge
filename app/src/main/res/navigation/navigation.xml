@@ -34,6 +34,12 @@
         <action
             android:id="@+id/action_vocabFragment_to_exerciseFragment"
             app:destination="@id/exerciseFragment" />
+        <argument
+            android:name="groupButton"
+            app:argType="integer" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/exerciseFragment"
@@ -43,6 +49,12 @@
         <action
             android:id="@+id/action_exerciseFragment_to_scoreFragment"
             app:destination="@id/scoreFragment" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="groupButton"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/scoreFragment"
@@ -52,6 +64,9 @@
         <action
             android:id="@+id/action_scoreFragment_to_groupingFragment"
             app:destination="@id/groupingFragment" />
+        <argument
+            android:name="uerName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
