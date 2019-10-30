@@ -70,10 +70,20 @@ class VocabFragment : Fragment() {
             vocabImage4.setImageResource(R.drawable.duckling)
             vocabText4.text = "Duck : เป็ด"
 
+        } else if (args.groupButton == 4 ){
+            vocabImage1.setImageResource(R.drawable.buttonblue)
+            vocabText1.text = "Blue : สีฟ้า"
+            vocabImage2.setImageResource(R.drawable.buttongreen)
+            vocabText2.text = "Green : สีเขียว"
+            vocabImage3.setImageResource(R.drawable.buttonred)
+            vocabText3.text = "Red : สีแดง"
+            vocabImage4.setImageResource(R.drawable.buttonyellow)
+            vocabText4.text = "Yellow : สีเหลือง"
+
         }
 
-        binding.exerciseButton.setOnClickListener {
-                view -> view.findNavController().navigate(R.id.action_vocabFragment_to_exerciseFragment)
+        binding.exerciseButton.setOnClickListener {view ->
+            view.findNavController().navigate(VocabFragmentDirections.actionVocabFragmentToExerciseFragment(args.userName , args.groupButton))
         }
         return binding.root
     }
