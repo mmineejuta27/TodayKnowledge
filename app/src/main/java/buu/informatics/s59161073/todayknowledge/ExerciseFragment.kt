@@ -20,7 +20,7 @@ import org.w3c.dom.Text
  * A simple [Fragment] subclass.
  */
 class ExerciseFragment : Fragment() {
-    var checkValue = 0
+    var checkValue : Int = 0
 
     data class Exercise(
         val text: String,
@@ -99,7 +99,7 @@ class ExerciseFragment : Fragment() {
         binding.ansButton1.setOnClickListener {
             view ->
             if (questionIndex >= exerciseResource.size-1){
-                view.findNavController().navigate(R.id.action_exerciseFragment_to_scoreFragment)
+                view.findNavController().navigate(ExerciseFragmentDirections.actionExerciseFragmentToScoreFragment(args.groupButton,args.userName,checkValue))
             }else{
                 checkAns(0)
                 questionIndex++
@@ -110,7 +110,7 @@ class ExerciseFragment : Fragment() {
         }
         binding.ansButton2.setOnClickListener { view ->
             if (questionIndex >= exerciseResource.size-1){
-                view.findNavController().navigate(R.id.action_exerciseFragment_to_scoreFragment)
+                view.findNavController().navigate(ExerciseFragmentDirections.actionExerciseFragmentToScoreFragment(args.groupButton, args.userName, checkValue))
             }else{
                 checkAns(1)
                 questionIndex++
@@ -122,7 +122,7 @@ class ExerciseFragment : Fragment() {
         binding.ansButton3.setOnClickListener {
                 view ->
             if (questionIndex >= exerciseResource.size-1){
-                view.findNavController().navigate(R.id.action_exerciseFragment_to_scoreFragment)
+                view.findNavController().navigate(ExerciseFragmentDirections.actionExerciseFragmentToScoreFragment(args.groupButton, args.userName, checkValue))
             }else{
                 checkAns(2)
                 questionIndex++
@@ -134,7 +134,7 @@ class ExerciseFragment : Fragment() {
         binding.ansButton4.setOnClickListener {
                 view ->
             if (questionIndex >= exerciseResource.size-1){
-                view.findNavController().navigate(R.id.action_exerciseFragment_to_scoreFragment)
+                view.findNavController().navigate(ExerciseFragmentDirections.actionExerciseFragmentToScoreFragment(args.groupButton, args.userName ,checkValue))
             }else{
                 checkAns(3)
                 questionIndex++

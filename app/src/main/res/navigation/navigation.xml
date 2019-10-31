@@ -61,12 +61,18 @@
         android:name="buu.informatics.s59161073.todayknowledge.ScoreFragment"
         android:label="ScoreFragment"
         tools:layout="@layout/fragment_score">
-        <argument
-            android:name="uerName"
-            app:argType="string" />
         <action
             android:id="@+id/action_scoreFragment_to_userFragment"
             app:destination="@id/userFragment" />
+        <argument
+            android:name="groupButton"
+            app:argType="integer" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="scoreGame"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
