@@ -99,6 +99,7 @@ class ExerciseFragment : Fragment() {
         binding.ansButton1.setOnClickListener {
             view ->
             if (questionIndex >= exerciseResource.size-1){
+                checkAns(0)
                 view.findNavController().navigate(ExerciseFragmentDirections.actionExerciseFragmentToScoreFragment(args.groupButton,args.userName,checkValue))
             }else{
                 checkAns(0)
@@ -110,6 +111,7 @@ class ExerciseFragment : Fragment() {
         }
         binding.ansButton2.setOnClickListener { view ->
             if (questionIndex >= exerciseResource.size-1){
+                checkAns(1)
                 view.findNavController().navigate(ExerciseFragmentDirections.actionExerciseFragmentToScoreFragment(args.groupButton, args.userName, checkValue))
             }else{
                 checkAns(1)
@@ -122,6 +124,7 @@ class ExerciseFragment : Fragment() {
         binding.ansButton3.setOnClickListener {
                 view ->
             if (questionIndex >= exerciseResource.size-1){
+                checkAns(2)
                 view.findNavController().navigate(ExerciseFragmentDirections.actionExerciseFragmentToScoreFragment(args.groupButton, args.userName, checkValue))
             }else{
                 checkAns(2)
@@ -134,6 +137,7 @@ class ExerciseFragment : Fragment() {
         binding.ansButton4.setOnClickListener {
                 view ->
             if (questionIndex >= exerciseResource.size-1){
+                checkAns(3)
                 view.findNavController().navigate(ExerciseFragmentDirections.actionExerciseFragmentToScoreFragment(args.groupButton, args.userName ,checkValue))
             }else{
                 checkAns(3)
@@ -149,7 +153,7 @@ class ExerciseFragment : Fragment() {
 
     private fun checkAns(index:Int) {
         if(answers[index] == currentExercise.images[0]){
-            checkValue++
+            checkValue = checkValue + 150
             Toast.makeText(context,"Correct : ${checkValue}",Toast.LENGTH_LONG).show()
             Log.i("checlAns","${checkValue}")
         }else{

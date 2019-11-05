@@ -22,27 +22,32 @@ class ScoreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var args = VocabFragmentArgs.fromBundle(arguments!!)
+        var args = ScoreFragmentArgs.fromBundle(arguments!!)
 
-        Toast.makeText(context,"name : ${args.userName} group : ${args.groupButton} ", Toast.LENGTH_LONG).show()
+        Toast.makeText(context,"name : ${args.userName} group : ${args.groupButton} score : ${args.scoreGame}", Toast.LENGTH_LONG).show()
         val binding = DataBindingUtil.inflate<FragmentScoreBinding>(inflater,
             R.layout.fragment_score,container,false)
         var groupText : TextView = binding.groupText
         var nameText : TextView = binding.nameText
+        var scoreText : TextView = binding.scoreText
 
 
         if (args.groupButton == 1 ){
             groupText.text = "JOB"
             nameText.text = args.userName
+            scoreText.text = "${args.scoreGame} Score"
         }else if (args.groupButton == 2){
             groupText.text = "FRUIT"
             nameText.text = args.userName
+            scoreText.text = "${args.scoreGame} Score"
         }else if (args.groupButton == 3){
             groupText.text = "ANIMAL"
             nameText.text = args.userName
+            scoreText.text = "${args.scoreGame} Score"
         }else if (args.groupButton == 4){
             groupText.text = "COLOR"
             nameText.text = args.userName
+            scoreText.text = "${args.scoreGame} Score"
         }
 
         binding.mainButton.setOnClickListener {
