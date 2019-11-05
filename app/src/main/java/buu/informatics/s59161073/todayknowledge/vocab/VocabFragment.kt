@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.R
@@ -39,58 +40,28 @@ class VocabFragment : Fragment() {
         Log.i("VocabFragment", "Called ViewModelProviders.of")
         viewModel = ViewModelProviders.of(this).get(VocabViewModel::class.java)
 
-        var groupVocabText : TextView = binding.groupVocabText
-        var vocabImage1 : ImageView = binding.vocabImage1
-        var vocabText1 : TextView = binding.vocabText1
-        var vocabImage2 : ImageView = binding.vocabImage2
-        var vocabText2 : TextView = binding.vocabText2
-        var vocabImage3 : ImageView = binding.vocabImage3
-        var vocabText3 : TextView = binding.vocabText3
-        var vocabImage4 : ImageView = binding.vocabImage4
-        var vocabText4 : TextView = binding.vocabText4
+        binding.vocabViewModel = viewModel
 
-        if (args.groupButton == 1 ) {
-            groupVocabText.text = "JOB"
-            vocabImage1.setImageResource(R.drawable.nurse)
-            vocabText1.text = "Nurse : นางพยาบาล"
-            vocabImage2.setImageResource(R.drawable.policeman)
-            vocabText2.text = "Policeman : ตำรวจ"
-            vocabImage3.setImageResource(R.drawable.teacher)
-            vocabText3.text = "Teacher : คุณครู"
-            vocabImage4.setImageResource(R.drawable.doctor)
-            vocabText4.text = "Doctor : หมอ"
+        binding.lifecycleOwner = this
 
-        }else if (args.groupButton == 2){
-            vocabImage1.setImageResource(R.drawable.apple)
-            vocabText1.text = "Apple : แอบเปิ้ล"
-            vocabImage2.setImageResource(R.drawable.pumpkin)
-            vocabText2.text = "Pumpkin : ฟักทอง"
-            vocabImage3.setImageResource(R.drawable.watermelon)
-            vocabText3.text = "Watermelon : แตงโม"
-            vocabImage4.setImageResource(R.drawable.banana)
-            vocabText4.text = "Banana : กล้วย"
+        viewModel.setVocab(args.groupButton)
 
-        }else if (args.groupButton == 3 ){
-            vocabImage1.setImageResource(R.drawable.tiger)
-            vocabText1.text = "Tiger : เสือ"
-            vocabImage2.setImageResource(R.drawable.bird)
-            vocabText2.text = "Bird : นก"
-            vocabImage3.setImageResource(R.drawable.clownfish)
-            vocabText3.text = "Fish : ปลา"
-            vocabImage4.setImageResource(R.drawable.duckling)
-            vocabText4.text = "Duck : เป็ด"
+        viewModel.flag.observe(this, Observer {
+            binding.groupVocabText.text = viewModel.groupVocabText.value
 
-        } else if (args.groupButton == 4 ){
-            vocabImage1.setImageResource(R.drawable.buttonblue)
-            vocabText1.text = "Blue : สีฟ้า"
-            vocabImage2.setImageResource(R.drawable.buttongreen)
-            vocabText2.text = "Green : สีเขียว"
-            vocabImage3.setImageResource(R.drawable.buttonred)
-            vocabText3.text = "Red : สีแดง"
-            vocabImage4.setImageResource(R.drawable.buttonyellow)
-            vocabText4.text = "Yellow : สีเหลือง"
+            binding.vocabImage1.setBackgroundResource(viewModel.vocabImage1.value!!)
+            binding.vocabText1.text = viewModel.vocabText1.value
 
-        }
+            binding.vocabImage2.setBackgroundResource(viewModel.vocabImage2.value!!)
+            binding.vocabText2.text = viewModel.vocabText2.value
+
+            binding.vocabImage3.setBackgroundResource(viewModel.vocabImage3.value!!)
+            binding.vocabText3.text = viewModel.vocabText3.value
+
+            binding.vocabImage4.setBackgroundResource(viewModel.vocabImage4.value!!)
+            binding.vocabText4.text = viewModel.vocabText4.value
+
+        })
 
         binding.exerciseButton.setOnClickListener {view ->
             view.findNavController().navigate(
@@ -102,6 +73,7 @@ class VocabFragment : Fragment() {
         }
         return binding.root
     }
+
 
 
 }

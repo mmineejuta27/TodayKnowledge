@@ -73,6 +73,8 @@ class ExerciseFragment : Fragment() {
             binding.ansButton2.setBackgroundResource(newAnswer[1])
             binding.ansButton3.setBackgroundResource(newAnswer[2])
             binding.ansButton4.setBackgroundResource(newAnswer[3])
+
+
         })
 
         return binding.root
