@@ -31,8 +31,7 @@ class VocabFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var args =
-            VocabFragmentArgs.fromBundle(arguments!!)
+        var args = VocabFragmentArgs.fromBundle(arguments!!)
         Toast.makeText(context,"name : ${args.userName} group : ${args.groupButton}", Toast.LENGTH_LONG).show()
         val binding = DataBindingUtil.inflate<FragmentVocabBinding>(inflater,
             R.layout.fragment_vocab,container,false)

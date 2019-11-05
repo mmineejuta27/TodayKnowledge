@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <data>
+        <variable
+            name="exerciseViewModel"
+            type="buu.informatics.s59161073.todayknowledge.exercise.ExerciseViewModel" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -48,7 +52,8 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ansButton3"
             app:layout_constraintTop_toBottomOf="@+id/ansButton2"
-            app:layout_constraintVertical_bias="0.255" />
+            app:layout_constraintVertical_bias="0.255"
+            android:onClick="@{ () -> exerciseViewModel.hasClick(3)}"/>
 
         <Button
             android:id="@+id/ansButton1"
@@ -61,7 +66,8 @@
             app:layout_constraintEnd_toStartOf="@+id/ansButton2"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/exerciseText" />
+            app:layout_constraintTop_toBottomOf="@+id/exerciseText"
+            android:onClick="@{ () -> exerciseViewModel.hasClick(0)}"/>
 
         <Button
             android:id="@+id/ansButton2"
@@ -73,7 +79,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ansButton1"
-            app:layout_constraintTop_toBottomOf="@+id/exerciseText" />
+            app:layout_constraintTop_toBottomOf="@+id/exerciseText"
+            android:onClick="@{ () -> exerciseViewModel.hasClick(1)}"/>
 
         <Button
             android:id="@+id/ansButton3"
@@ -86,7 +93,8 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ansButton1"
-            app:layout_constraintVertical_bias="0.255" />
+            app:layout_constraintVertical_bias="0.255"
+            android:onClick="@{ () -> exerciseViewModel.hasClick(2)}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

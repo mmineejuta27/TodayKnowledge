@@ -29,8 +29,7 @@ class ScoreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var args =
-            ScoreFragmentArgs.fromBundle(arguments!!)
+        var args = ScoreFragmentArgs.fromBundle(arguments!!)
 
         Toast.makeText(context,"name : ${args.userName} group : ${args.groupButton} score : ${args.scoreGame}", Toast.LENGTH_LONG).show()
         val binding = DataBindingUtil.inflate<FragmentScoreBinding>(inflater,
