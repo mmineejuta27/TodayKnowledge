@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/userFragment"
-        android:name="buu.informatics.s59161073.todayknowledge.UserFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.user.UserFragment"
         android:label="UserFragment"
         tools:layout="@layout/fragment_user">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/groupingFragment"
-        android:name="buu.informatics.s59161073.todayknowledge.GroupingFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.grouping.GroupingFragment"
         android:label="GroupingFragment"
         tools:layout="@layout/fragment_grouping">
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/vocabFragment"
-        android:name="buu.informatics.s59161073.todayknowledge.VocabFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.vocab.VocabFragment"
         android:label="VocabFragment"
         tools:layout="@layout/fragment_vocab">
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/exerciseFragment"
-        android:name="buu.informatics.s59161073.todayknowledge.ExerciseFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.exercise.ExerciseFragment"
         android:label="ExerciseFragment"
         tools:layout="@layout/fragment_exercise">
         <action
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/scoreFragment"
-        android:name="buu.informatics.s59161073.todayknowledge.ScoreFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.score.ScoreFragment"
         android:label="ScoreFragment"
         tools:layout="@layout/fragment_score">
         <action
@@ -76,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="buu.informatics.s59161073.todayknowledge.AboutFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.about.AboutFragment"
         android:label="AboutFragment"
         tools:layout="@layout/fragment_about" />
 </navigation>

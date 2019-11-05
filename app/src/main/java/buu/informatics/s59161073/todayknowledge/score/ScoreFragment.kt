@@ -1,7 +1,8 @@
-package buu.informatics.s59161073.todayknowledge
+package buu.informatics.s59161073.todayknowledge.score
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,24 +10,35 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
+import buu.informatics.s59161073.todayknowledge.R
+import buu.informatics.s59161073.todayknowledge.score.ScoreFragmentArgs
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentScoreBinding
+import buu.informatics.s59161073.todayknowledge.grouping.GroupingViewModel
 
 /**
  * A simple [Fragment] subclass.
  */
 class ScoreFragment : Fragment() {
 
+    private lateinit var viewModel: ScoreViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var args = ScoreFragmentArgs.fromBundle(arguments!!)
+        var args =
+            ScoreFragmentArgs.fromBundle(arguments!!)
 
         Toast.makeText(context,"name : ${args.userName} group : ${args.groupButton} score : ${args.scoreGame}", Toast.LENGTH_LONG).show()
         val binding = DataBindingUtil.inflate<FragmentScoreBinding>(inflater,
             R.layout.fragment_score,container,false)
+
+        Log.i("ScoreFragment", "Called ViewModelProviders.of")
+        viewModel = ViewModelProviders.of(this).get(ScoreViewModel::class.java)
+
         var groupText : TextView = binding.groupText
         var nameText : TextView = binding.nameText
         var scoreText : TextView = binding.scoreText

@@ -1,4 +1,4 @@
-package buu.informatics.s59161073.todayknowledge
+package buu.informatics.s59161073.todayknowledge.about
 
 
 import android.os.Bundle
@@ -6,11 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import buu.informatics.s59161073.todayknowledge.R
 
 /**
  * A simple [Fragment] subclass.
  */
 class AboutFragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
