@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.R
@@ -36,28 +37,42 @@ class ScoreFragment : Fragment() {
         Log.i("ScoreFragment", "Called ViewModelProviders.of")
         viewModel = ViewModelProviders.of(this).get(ScoreViewModel::class.java)
 
-        var groupText : TextView = binding.groupText
-        var nameText : TextView = binding.nameText
-        var scoreText : TextView = binding.scoreText
+        binding.scoreViewModel = viewModel
+
+        binding.lifecycleOwner = this
+
+        viewModel.setScore(args.groupButton,args.userName,args.scoreGame)
+
+        viewModel.flag.observe(this, Observer {
+            binding.groupText.text = viewModel.groupText.value
+            binding.nameText.text = viewModel.nameText.value
+            binding.scoreText.text = viewModel.scoreText.value
+        })
 
 
-        if (args.groupButton == 1 ){
-            groupText.text = "JOB"
-            nameText.text = args.userName
-            scoreText.text = "${args.scoreGame} Score"
-        }else if (args.groupButton == 2){
-            groupText.text = "FRUIT"
-            nameText.text = args.userName
-            scoreText.text = "${args.scoreGame} Score"
-        }else if (args.groupButton == 3){
-            groupText.text = "ANIMAL"
-            nameText.text = args.userName
-            scoreText.text = "${args.scoreGame} Score"
-        }else if (args.groupButton == 4){
-            groupText.text = "COLOR"
-            nameText.text = args.userName
-            scoreText.text = "${args.scoreGame} Score"
-        }
+
+//        var groupText : TextView = binding.groupText
+//        var nameText : TextView = binding.nameText
+//        var scoreText : TextView = binding.scoreText
+
+
+//        if (args.groupButton == 1 ){
+//            groupText.text = "JOB"
+//            nameText.text = args.userName
+//            scoreText.text = "${args.scoreGame} Score"
+//        }else if (args.groupButton == 2){
+//            groupText.text = "FRUIT"
+//            nameText.text = args.userName
+//            scoreText.text = "${args.scoreGame} Score"
+//        }else if (args.groupButton == 3){
+//            groupText.text = "ANIMAL"
+//            nameText.text = args.userName
+//            scoreText.text = "${args.scoreGame} Score"
+//        }else if (args.groupButton == 4){
+//            groupText.text = "COLOR"
+//            nameText.text = args.userName
+//            scoreText.text = "${args.scoreGame} Score"
+//        }
 
         binding.mainButton.setOnClickListener {
                 view -> view.findNavController().navigate(R.id.action_scoreFragment_to_userFragment)
