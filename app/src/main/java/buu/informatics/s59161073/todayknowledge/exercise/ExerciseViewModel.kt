@@ -19,7 +19,7 @@ class ExerciseViewModel : ViewModel() {
     )
     val exercises2: MutableList<Exercise> = mutableListOf(
         Exercise(
-            text = "waterMelon",
+            text = "Watermelon",
             images = listOf(
                 R.drawable.watermelon,
                 R.drawable.banana,
@@ -28,7 +28,7 @@ class ExerciseViewModel : ViewModel() {
             )
         ),
         Exercise(
-            text = "apple",
+            text = "Apple",
             images = listOf(
                 R.drawable.apple,
                 R.drawable.banana,
@@ -37,7 +37,7 @@ class ExerciseViewModel : ViewModel() {
             )
         ),
         Exercise(
-            text = "pumpkin",
+            text = "Pumpkin",
             images = listOf(
                 R.drawable.pumpkin,
                 R.drawable.banana,
@@ -46,7 +46,7 @@ class ExerciseViewModel : ViewModel() {
             )
         ),
         Exercise(
-            text = "banana",
+            text = "Banana",
             images = listOf(
                 R.drawable.banana,
                 R.drawable.apple,

@@ -19,21 +19,20 @@ import buu.informatics.s59161073.todayknowledge.databinding.FragmentGroupingBind
  */
 class GroupingFragment : Fragment() {
 
-    private lateinit var viewModel: GroupingViewModel
+//    private lateinit var viewModel: GroupingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var args =
-            GroupingFragmentArgs.fromBundle(arguments!!)
+        var args = GroupingFragmentArgs.fromBundle(arguments!!)
         Toast.makeText(context,"name : ${args.userName}",Toast.LENGTH_LONG).show()
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentGroupingBinding>(inflater,
             R.layout.fragment_grouping,container,false)
 
-        Log.i("GroupingFragment", "Called ViewModelProviders.of")
-        viewModel = ViewModelProviders.of(this).get(GroupingViewModel::class.java)
+//        Log.i("GroupingFragment", "Called ViewModelProviders.of")
+//        viewModel = ViewModelProviders.of(this).get(GroupingViewModel::class.java)
 
         binding.fruitButton.setOnClickListener {
                 view -> view.findNavController().navigate(

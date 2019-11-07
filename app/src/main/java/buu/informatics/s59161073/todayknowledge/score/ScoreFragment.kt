@@ -13,9 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.R
-import buu.informatics.s59161073.todayknowledge.score.ScoreFragmentArgs
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentScoreBinding
-import buu.informatics.s59161073.todayknowledge.grouping.GroupingViewModel
 
 /**
  * A simple [Fragment] subclass.
