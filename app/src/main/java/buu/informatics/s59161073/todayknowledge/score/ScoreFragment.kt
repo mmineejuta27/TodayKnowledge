@@ -1,12 +1,11 @@
 package buu.informatics.s59161073.todayknowledge.score
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
@@ -50,34 +49,43 @@ class ScoreFragment : Fragment() {
         })
 
 
-
-//        var groupText : TextView = binding.groupText
-//        var nameText : TextView = binding.nameText
-//        var scoreText : TextView = binding.scoreText
-
-
-//        if (args.groupButton == 1 ){
-//            groupText.text = "JOB"
-//            nameText.text = args.userName
-//            scoreText.text = "${args.scoreGame} Score"
-//        }else if (args.groupButton == 2){
-//            groupText.text = "FRUIT"
-//            nameText.text = args.userName
-//            scoreText.text = "${args.scoreGame} Score"
-//        }else if (args.groupButton == 3){
-//            groupText.text = "ANIMAL"
-//            nameText.text = args.userName
-//            scoreText.text = "${args.scoreGame} Score"
-//        }else if (args.groupButton == 4){
-//            groupText.text = "COLOR"
-//            nameText.text = args.userName
-//            scoreText.text = "${args.scoreGame} Score"
-//        }
-
         binding.mainButton.setOnClickListener {
                 view -> view.findNavController().navigate(R.id.action_scoreFragment_to_userFragment)
         }
+        setHasOptionsMenu(true)
         return binding.root
+    }
+
+    private fun getShareIntent() : Intent {
+        var args = ScoreFragmentArgs.fromBundle(arguments!!)
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain")
+            .putExtra(Intent.EXTRA_TEXT, getString(R.string.share_success_text, args.userName , args.scoreGame))
+        return shareIntent
+    }
+
+    // Starting an Activity with our new Intent
+    private fun shareSuccess() {
+        startActivity(getShareIntent())
+    }
+
+    // Showing the Share Menu Item Dynamically
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.share_menu, menu)
+        // check if the activity resolves
+        if (null == getShareIntent().resolveActivity(activity!!.packageManager)) {
+            // hide the menu item if it doesn't resolve
+            menu.findItem(R.id.shareItem)?.setVisible(false)
+        }
+    }
+
+    // Sharing from the Menu
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.shareItem -> shareSuccess()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 
