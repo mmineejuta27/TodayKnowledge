@@ -45,4 +45,5 @@ dependencies {
     implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
     //ViewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
 }
