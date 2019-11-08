@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_userFragment_to_groupingFragment"
             app:destination="@id/groupingFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_totalscoreFragment"
+            app:destination="@id/totalscoreFragment" />
     </fragment>
     <fragment
         android:id="@+id/groupingFragment"
@@ -79,4 +82,12 @@
         android:name="buu.informatics.s59161073.todayknowledge.about.AboutFragment"
         android:label="AboutFragment"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/totalscoreFragment"
+        android:name="buu.informatics.s59161073.todayknowledge.totalscore.TotalscoreFragment"
+        android:label="TotalscoreFragment" >
+        <argument
+            android:name="user"
+            app:argType="string" />
+    </fragment>
 </navigation>

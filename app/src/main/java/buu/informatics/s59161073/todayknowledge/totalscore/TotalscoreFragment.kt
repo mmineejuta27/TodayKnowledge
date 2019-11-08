@@ -20,15 +20,16 @@ class TotalscoreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
+        var args =
+            TotalscoreFragmentArgs.fromBundle(arguments!!)
         val binding = DataBindingUtil.inflate<FragmentTotalscoreBinding>(inflater,
             R.layout.fragment_totalscore,container,false)
 
         val adapter = TotalscoreAdapter()
-        binding.totalList.adapter = adapter
+        binding.totalScoreList.adapter = adapter
         binding.setLifecycleOwner(this)
 
-        return inflater.inflate(R.layout.fragment_totalscore, container, false)
+        return binding.root
     }
 
 

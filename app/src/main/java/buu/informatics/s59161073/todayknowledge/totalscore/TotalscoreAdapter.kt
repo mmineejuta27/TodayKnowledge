@@ -31,9 +31,9 @@ class TotalscoreAdapter: RecyclerView.Adapter<TextItemViewHolder>() {
     override fun onBindViewHolder(holder: TextItemViewHolder, position: Int) {
 
         holder.textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24F)
-        val item = dataName[position]
+//        val item = dataName[position]
 
-//        Log.i("ShowHS", "${item.username}")
+        Log.i("ShowHS", "${dataName[position]}")
 
         holder.textView.text = "\t${dataName[position]} _with score_ ${dataScore[position]}\n"
 
