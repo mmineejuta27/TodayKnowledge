@@ -34,4 +34,11 @@
     <string name="total_score">TOTAL SCORE</string>
     <string name="test_button">Test</string>
     <string name="name_input">กรุณากรอกชื่อ</string>
+    <string name="color">color</string>
+    <string name="animall">animall</string>
+    <string name="jobb">jobb</string>
+    <string name="foodd">foodd</string>
+    <string name="img2">TODO</string>
+    <string name="img3">img3</string>
+    <string name="img4">img4</string>
 </resources>

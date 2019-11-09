@@ -100,7 +100,7 @@
             android:layout_width="69dp"
             android:layout_height="69dp"
             android:layout_marginTop="30dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/animall"
             android:src="@drawable/tiger"
             app:layout_constraintEnd_toStartOf="@+id/imageView2"
             app:layout_constraintHorizontal_bias="0.5"
@@ -116,7 +116,8 @@
             app:layout_constraintEnd_toStartOf="@+id/imageView3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:contentDescription="@string/foodd" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -127,14 +128,15 @@
             app:layout_constraintEnd_toStartOf="@+id/imageView4"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:contentDescription="@string/jobb" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="69dp"
             android:layout_height="69dp"
             android:layout_marginTop="30dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/color"
             android:src="@drawable/lunchbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

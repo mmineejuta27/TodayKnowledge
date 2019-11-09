@@ -27,6 +27,7 @@ class GroupingFragment : Fragment() {
     ): View? {
         var args = GroupingFragmentArgs.fromBundle(arguments!!)
         Toast.makeText(context,"name : ${args.userName}",Toast.LENGTH_LONG).show()
+        Log.i("User","${args.userName}")
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentGroupingBinding>(inflater,
             R.layout.fragment_grouping,container,false)
