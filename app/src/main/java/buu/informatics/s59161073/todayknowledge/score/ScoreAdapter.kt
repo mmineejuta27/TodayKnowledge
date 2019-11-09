@@ -1,4 +1,4 @@
-package buu.informatics.s59161073.todayknowledge.totalscore
+package buu.informatics.s59161073.todayknowledge.score
 
 import android.graphics.Color
 import android.util.Log
@@ -10,13 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import buu.informatics.s59161073.todayknowledge.R
 import buu.informatics.s59161073.todayknowledge.database.GameScore
 
-class TotalscoreAdapter: RecyclerView.Adapter<TextItemViewHolder>() {
-
-//    var data =  listOf<SleepNight>()
-//        set(value) {
-//            field = value
-//            notifyDataSetChanged()
-//        }
+class ScoreAdapter: RecyclerView.Adapter<TextItemViewHolder>() {
 
     var data =  listOf<GameScore>()
         set(value) {
@@ -24,8 +18,6 @@ class TotalscoreAdapter: RecyclerView.Adapter<TextItemViewHolder>() {
             notifyDataSetChanged()
         }
 
-//    var dataName = listOf("name","name2","name32","name433","name5444","name6","name7","name8","name9","name0","name1")
-//    var dataScore = listOf("7","9","10","10","9","10","10","10","10","10","10")
 
     override fun getItemCount() = data.size
 
@@ -36,7 +28,7 @@ class TotalscoreAdapter: RecyclerView.Adapter<TextItemViewHolder>() {
 
         Log.i("ShowHS", "${item.username}")
 
-        holder.textView.text = "\t${item.username} is score ${item.score}\n"
+        holder.textView.text = "\t${item.username} is score ${item.score} \n"
 
         holder.textView.setTextColor(Color.BLACK)
 
@@ -45,8 +37,7 @@ class TotalscoreAdapter: RecyclerView.Adapter<TextItemViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TextItemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
 
-        val view = layoutInflater
-            .inflate(R.layout.text_item_view, parent, false) as TextView
+        val view = layoutInflater.inflate(R.layout.text_item_view, parent, false) as TextView
 
         return TextItemViewHolder(view)
     }

@@ -30,11 +30,13 @@ class UserFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentUserBinding>(inflater,
             R.layout.fragment_user,container,false)
 
-        user = binding.inputName.text.toString()
-        binding.okButton.setOnClickListener {view ->
 
+
+
+        binding.okButton.setOnClickListener {view ->
+            user = binding.inputName.text.toString()
             if(user.isEmpty()){
-                Toast.makeText(getActivity(), "ช่องว่าง เขียนชื่อด้วยนะ" ,Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "ช่องว่าง เขียนชื่อด้วยนะ" ,Toast.LENGTH_LONG).show()
                 Log.i("User","Not login")
             }else{
                 view.findNavController().navigate(
@@ -47,7 +49,7 @@ class UserFragment : Fragment() {
 
         }
 
-        binding.testBut?.setOnClickListener {view ->
+        binding.totalButton?.setOnClickListener {view ->
             view.findNavController().navigate(
                 UserFragmentDirections.actionUserFragmentToTotalscoreFragment(
                     user

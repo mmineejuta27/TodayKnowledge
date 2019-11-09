@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import buu.informatics.s59161073.todayknowledge.R
+import buu.informatics.s59161073.todayknowledge.database.GameScoreDatabase
 import buu.informatics.s59161073.todayknowledge.databinding.FragmentScoreBinding
 
 /**
@@ -33,12 +34,19 @@ class ScoreFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentScoreBinding>(inflater,
             R.layout.fragment_score,container,false)
 
+        val application = requireNotNull(this.activity).application
+
+        val dataSource = GameScoreDatabase.getInstance(application).gameScoreDatabaseDao
+
+        val viewModelFactory = ScoreViewModelFactory(dataSource, application)
+
         Log.i("ScoreFragment", "Called ViewModelProviders.of")
-        viewModel = ViewModelProviders.of(this).get(ScoreViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(ScoreViewModel::class.java)
 
         binding.scoreViewModel = viewModel
 
         binding.lifecycleOwner = this
+
 
         viewModel.setScore(args.groupButton,args.userName,args.scoreGame)
 
@@ -46,6 +54,12 @@ class ScoreFragment : Fragment() {
             binding.groupText.text = viewModel.groupText.value
             binding.nameText.text = viewModel.nameText.value
             binding.scoreText.text = viewModel.scoreText.value
+        })
+
+        viewModel.start.observe(this, Observer {
+            Log.i("InsertScoreDB", "${args.userName}  Score : ${args.scoreGame}")
+
+            viewModel.insertScore(args.userName, args.scoreGame)
         })
 
 
