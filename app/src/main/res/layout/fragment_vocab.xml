@@ -9,9 +9,11 @@
             name="vocabViewModel"
             type="buu.informatics.s59161073.todayknowledge.vocab.VocabViewModel" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/wallpaper"
         tools:context=".vocab.VocabFragment">
 
         <!-- TODO: Update blank fragment layout -->
@@ -48,10 +50,10 @@
             android:layout_height="80dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="50dp"
+            android:contentDescription="@string/vocab_image1"
             app:layout_constraintBottom_toTopOf="@+id/vocabImage2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/vocab_image1" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/vocabImage2"

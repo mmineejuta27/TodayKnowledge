@@ -8,9 +8,11 @@
             name="exerciseViewModel"
             type="buu.informatics.s59161073.todayknowledge.exercise.ExerciseViewModel" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/wallpaper"
         tools:context=".exercise.ExerciseFragment">
 
         <!-- TODO: Update blank fragment layout -->
@@ -47,13 +49,13 @@
             android:layout_height="130dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/pumpkin"
+            android:onClick="@{ () -> exerciseViewModel.hasClick(3)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ansButton3"
             app:layout_constraintTop_toBottomOf="@+id/ansButton2"
-            app:layout_constraintVertical_bias="0.255"
-            android:onClick="@{ () -> exerciseViewModel.hasClick(3)}"/>
+            app:layout_constraintVertical_bias="0.255" />
 
         <Button
             android:id="@+id/ansButton1"
@@ -63,11 +65,11 @@
             android:layout_marginTop="70dp"
             android:width="2dp"
             android:background="@drawable/apple"
+            android:onClick="@{ () -> exerciseViewModel.hasClick(0)}"
             app:layout_constraintEnd_toStartOf="@+id/ansButton2"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/exerciseText"
-            android:onClick="@{ () -> exerciseViewModel.hasClick(0)}"/>
+            app:layout_constraintTop_toBottomOf="@+id/exerciseText" />
 
         <Button
             android:id="@+id/ansButton2"
@@ -76,11 +78,11 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/banana"
+            android:onClick="@{ () -> exerciseViewModel.hasClick(1)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ansButton1"
-            app:layout_constraintTop_toBottomOf="@+id/exerciseText"
-            android:onClick="@{ () -> exerciseViewModel.hasClick(1)}"/>
+            app:layout_constraintTop_toBottomOf="@+id/exerciseText" />
 
         <Button
             android:id="@+id/ansButton3"
@@ -88,13 +90,13 @@
             android:layout_height="130dp"
             android:layout_marginStart="30dp"
             android:background="@drawable/watermelon"
+            android:onClick="@{ () -> exerciseViewModel.hasClick(2)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ansButton4"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ansButton1"
-            app:layout_constraintVertical_bias="0.255"
-            android:onClick="@{ () -> exerciseViewModel.hasClick(2)}"/>
+            app:layout_constraintVertical_bias="0.255" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -38,7 +38,7 @@ class TotalscoreAdapter: RecyclerView.Adapter<TextItemViewHolder>() {
 
         holder.textView.text = "\t${item.username} is score ${item.score}\n"
 
-        holder.textView.setTextColor(Color.BLACK)
+        holder.textView.setTextColor(Color.WHITE)
 
     }
 

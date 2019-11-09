@@ -13,10 +13,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/wallpaper"
         tools:context=".score.ScoreFragment">
 
         <!-- TODO: Update blank fragment layout -->
-
 
 
         <ImageView
@@ -24,13 +24,13 @@
             android:layout_width="156dp"
             android:layout_height="186dp"
             android:layout_marginTop="30dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/usersilhouette"
             app:layout_constraintBottom_toTopOf="@+id/groupText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/todo" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/groupText"

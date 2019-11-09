@@ -8,6 +8,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/wallpaper"
         tools:context=".user.UserFragment">
 
         <!-- TODO: Update blank fragment layout -->
@@ -19,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:text="@string/todays_knowledge"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/background_light"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,13 +32,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/name_input"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/aboutInformation1"
-            android:autofillHints="" />
+            app:layout_constraintTop_toBottomOf="@+id/aboutInformation1" />
 
         <TextView
             android:id="@+id/aboutInformation1"
@@ -45,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/vocabulary"
+            android:textColor="@android:color/background_light"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
